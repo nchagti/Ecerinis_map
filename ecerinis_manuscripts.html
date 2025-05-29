@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping <em>Ecerinis</em></title>
+    <!-- Link to specific CSS for this page -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="ecerinis_manuscripts.css">
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> <!--mapping libraries usually go in the header-->
+  </head>
+<body>
+    <div class="container">
+        <h1>
+            Mapping Albertino Mussato's <em>Ecerinis</em>
+        </h1>
+    <div id="intro">
+        Albertino Mussato, a Paduan notary and diplomat, composed <em>Ecerinis</em>, the first classical tragedy since antiquity in 1315. Explore the map to see where the extant manuscript witnesses of <em>Ecerinis</em> are held.
+    </div>
+    <h2>Where are the <em>Ecerinis</em> Manuscripts Held?</h2>
+      <div id="map">
+      </div>
+      <button id="zoomToEurope">Zoom to Europe</button>
+    </div>
+
+
+     <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Include specific JS for this page -->
+    <script src="ecerinis_manuscripts.js"></script>
+    <!--<script src="ecerinis_map.js"></script> each script should do one main thing, so keep them separate -->
+</body>

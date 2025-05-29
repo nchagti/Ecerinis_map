@@ -1,0 +1,36 @@
+{
+    "manuscripts": [
+            {
+                "coordinates": [45.70452525984535, 9.6631198781202],
+                "name": "Ecerinis",
+                "number": "MA 277 (Γ II 37)",
+                "date": "15th c. CE",
+                "institution": "Biblioteca Civica Angelo Mai",
+                "institutionCity": "Bergamo"
+            },
+            {
+                "coordinates": [52.50794267460308, 13.37082755350924],
+                "name": "Ecerinis",
+                "number": "lat. fol. 812",
+                "date": "1433 CE",
+                "institution": "Staatsbibliothek Preußischer Kulturbesitz",
+                "institutionCity": "Berlin"
+            },
+            {
+                "coordinates": [44.49675307953846, 11.353064581723348],
+                "name": "Ecerinis",
+                "number": "2073",
+                "date": "14th-15th c. CE",
+                "institution": "Biblioteca Universitaria",
+                "institutionCity": "Bologna"
+            },
+            {
+                "coordinates": [41.84240487737197, -3.1069307752596607],
+                "name": "Ecerinis",
+                "number": "156",
+                "date": "15th c. CE",
+                "institution": "Archivo Biblioteca de la Santa Iglesia Catedral",
+                "institutionCity": "El Burgo de Osma, Soria"
+            }
+    ]
+}
