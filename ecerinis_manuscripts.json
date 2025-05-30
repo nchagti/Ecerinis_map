@@ -6,7 +6,11 @@
                 "number": "MA 277 (Γ II 37)",
                 "date": "15th c. CE",
                 "institution": "Biblioteca Civica Angelo Mai",
-                "institutionCity": "Bergamo"
+                "institutionCity": "Bergamo",
+                "notation": {
+                    "base": "Be",
+                "superscript": "1"},
+                "families": ["x", "ε"]
             },
             {
                 "coordinates": [52.50794267460308, 13.37082755350924],
@@ -14,7 +18,11 @@
                 "number": "lat. fol. 812",
                 "date": "1433 CE",
                 "institution": "Staatsbibliothek Preußischer Kulturbesitz",
-                "institutionCity": "Berlin"
+                "institutionCity": "Berlin",
+                "notation": {
+                    "base": "B"
+                },
+                "families": ["x", "α"]
             },
             {
                 "coordinates": [44.49675307953846, 11.353064581723348],
@@ -22,7 +30,10 @@
                 "number": "2073",
                 "date": "14th-15th c. CE",
                 "institution": "Biblioteca Universitaria",
-                "institutionCity": "Bologna"
+                "institutionCity": "Bologna",
+                "notation": {
+                    "base": "U"},
+                "families": ["x", "ζ"]
             },
             {
                 "coordinates": [41.84240487737197, -3.1069307752596607],
@@ -30,7 +41,10 @@
                 "number": "156",
                 "date": "15th c. CE",
                 "institution": "Archivo Biblioteca de la Santa Iglesia Catedral",
-                "institutionCity": "El Burgo de Osma, Soria"
+                "institutionCity": "El Burgo de Osma, Soria",
+                "notation": {
+                    "base": "Bu"},
+                "families": ["x", "η"]
             }
     ]
 }
