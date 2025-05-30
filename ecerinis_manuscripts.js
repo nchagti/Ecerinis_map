@@ -138,8 +138,7 @@ $(function () {
     //When the page loads, populate activeFamilies with all the initially checked families
     checkedFamilyFilters.each(function () {
         activeFamilies.push($(this).val());
-
-        //within the function block, listen for changes on the checkboxes
+        });
 
         familyFilters.change(function () {
 
@@ -147,12 +146,12 @@ $(function () {
             activeFamilies = [];
 
             // Loop through all checked boxes and store their values
-            checkedFamilyFilters.each(function () {
+            $('#familyFilter input[type="checkbox"]:checked').each(function () {
                 activeFamilies.push($(this).val());
             });
 
             updateVisibleMarkers();
         });
-    });
+    
 
 });
