@@ -22,11 +22,11 @@ $(function () {
         }
     );
 
-
+const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
     $.getJSON("ecerinis_manuscripts.json", function (data) {
         console.log(`Manuscripts data loaded: ${data}`);
         console.log(data.manuscripts)
-        const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
+        
         data.manuscripts.forEach(function (manuscript) {
             let manuscriptCoords = []
             if (manuscript.coordinates) {
@@ -138,20 +138,20 @@ $(function () {
     //When the page loads, populate activeFamilies with all the initially checked families
     checkedFamilyFilters.each(function () {
         activeFamilies.push($(this).val());
+    });
+
+    familyFilters.change(function () {
+
+        // Reset the array
+        activeFamilies = [];
+
+        // Loop through all checked boxes and store their values
+        $('#familyFilter input[type="checkbox"]:checked').each(function () {
+            activeFamilies.push($(this).val());
         });
 
-        familyFilters.change(function () {
+        updateVisibleMarkers();
+    });
 
-            // Reset the array
-            activeFamilies = [];
-
-            // Loop through all checked boxes and store their values
-            $('#familyFilter input[type="checkbox"]:checked').each(function () {
-                activeFamilies.push($(this).val());
-            });
-
-            updateVisibleMarkers();
-        });
-    
 
 });
