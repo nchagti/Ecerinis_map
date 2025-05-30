@@ -10,7 +10,7 @@
                 "notation": {
                     "base": "Be",
                 "superscript": "1"},
-                "families": ["ε"]
+                "families": ["ε", "x"]
             },
             {
                 "coordinates": [52.50794267460308, 13.37082755350924],
@@ -22,7 +22,7 @@
                 "notation": {
                     "base": "B"
                 },
-                "families": ["α"]
+                "families": ["α", "x"]
             },
             {
                 "coordinates": [44.49675307953846, 11.353064581723348],

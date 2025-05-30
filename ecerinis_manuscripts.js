@@ -3,9 +3,7 @@ $(function () {
     const map = L.map('map').setView([56.79905363342418, 13.808172660007736], 3);
 
     // 2. Add a tile layer (the base map image)
-
     // Using OpenStreetMap tiles
-
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19, // Max zoom level for these tiles
@@ -17,12 +15,13 @@ $(function () {
     const resetZoom = $('#resetZoom')
     resetZoom.click(
         function () {
-            console.log(`Button was clicked!`);
+            console.log(`Reset Zoom button was clicked!`);
             map.setView([56.79905363342418, 13.808172660007736], 3)
         }
     );
 
     const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
+    let activeFamilies = [];
     $.getJSON("ecerinis_manuscripts.json", function (data) {
         console.log(`Manuscripts data loaded: ${data}`);
         console.log(data.manuscripts)
@@ -37,7 +36,7 @@ $(function () {
             }
             let manuscriptName = ''
             if (manuscript.name) {
-                manuscriptName = manuscript.name;
+                manuscriptName = manuscript.name; 
             }
             else {
                 console.log(`Error: No manuscript name found.`);
@@ -107,7 +106,6 @@ $(function () {
             manuscriptMarker.addTo(map).bindPopup(popupMessage);
 
         });
-        let activeFamilies = [];
         function updateVisibleMarkers() {
             allMarkers.forEach(function (marker) {
                 let showMarker = false;
@@ -116,9 +114,9 @@ $(function () {
                         showMarker = true;
                         break;
                     }
-                    else {
-                        console.log(`Error showing family marker`)
-                    }
+                    // else {
+                    //     console.log(`Error showing family marker`)
+                    // }
                 }
                 if (showMarker) {
                     marker.addTo(map)
@@ -133,20 +131,53 @@ $(function () {
         $('#familyFilter input[type="checkbox"]:checked').each(function () {
             activeFamilies.push($(this).val());
         });
+        console.log(activeFamilies);
         updateVisibleMarkers();
 
-        $('#familyFilter input[type="checkbox"]').change(function () {
+        const toggleAll = $('#toggleAll')
 
-            // Reset the array
+        toggleAll.click(
+            function () {
+                console.log("Toggle button was clicked!");
+                total = $('#familyFilter input[type="checkbox"]').length;  //count how many checkboxes there are
+                checked = $('#familyFilter input[type="checkbox"]:checked').length; //count how many checkboxes are checked
+                if (checked === total) { //if total = checked, then we want to deselect all boxes
+                    $('#familyFilter input[type="checkbox"]').prop("checked", false); //uncheck
+                    toggleAll.text("Select All"); //After I click the button, all boxes are unchecked, so I want to Select All next time i click the button
+                }
+
+                else {
+                    $('#familyFilter input[type="checkbox"]').prop("checked", true); //check
+                    toggleAll.text("Deselect All"); //i want to deselect all next time 
+                };
+                activeFamilies = []; //need to rebuild active families
+                $('#familyFilter input[type="checkbox"]:checked').each(function () {
+                    activeFamilies.push($(this).val());
+                });
+                console.log(activeFamilies);
+                updateVisibleMarkers();
+            });
+        $('#familyFilter input[type="checkbox"]').change(function () {
+            // clear the array
             activeFamilies = [];
 
-            // Loop through all checked boxes and store their values
+            // Loop through all checked boxes and get an array of families
             $('#familyFilter input[type="checkbox"]:checked').each(function () {
                 activeFamilies.push($(this).val());
             });
-
+            console.log(activeFamilies);
             updateVisibleMarkers();
+            total = $('#familyFilter input[type="checkbox"]').length;  //after users interact with the check boxes, i need fresh info about how many are checked 
+            checked = $('#familyFilter input[type="checkbox"]:checked').length;
+            if (checked === total) {
+                toggleAll.text("Deselect All");
+            }
+            else {
+                toggleAll.text("Select All");
+            }
         });
     });
-
+    //end of $.getJSON
 });
+
+
