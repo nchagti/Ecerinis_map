@@ -22,11 +22,11 @@ $(function () {
         }
     );
 
-const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
+    const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
     $.getJSON("ecerinis_manuscripts.json", function (data) {
         console.log(`Manuscripts data loaded: ${data}`);
         console.log(data.manuscripts)
-        
+
         data.manuscripts.forEach(function (manuscript) {
             let manuscriptCoords = []
             if (manuscript.coordinates) {
@@ -107,51 +107,46 @@ const allMarkers = []; //make sure to declare outside the loop, so not resetting
             manuscriptMarker.addTo(map).bindPopup(popupMessage);
 
         });
-    });
-
-    let activeFamilies = [];
-
-    function updateVisibleMarkers() {
-        allMarkers.forEach(function (marker) {
-            let showMarker = false;
-            for (let family of marker.families) {
-                if (activeFamilies.includes(family)) {
-                    showMarker = true;
-                    break;
+        let activeFamilies = [];
+        function updateVisibleMarkers() {
+            allMarkers.forEach(function (marker) {
+                let showMarker = false;
+                for (let family of marker.families) {
+                    if (activeFamilies.includes(family)) {
+                        showMarker = true;
+                        break;
+                    }
+                    else {
+                        console.log(`Error showing family marker`)
+                    }
+                }
+                if (showMarker) {
+                    marker.addTo(map)
                 }
                 else {
-                    console.log(`Error showing family marker`)
+                    map.removeLayer(marker);
                 }
-            }
-            if (showMarker) {
-                marker.addTo(map)
-            }
-            else {
-                map.removeLayer(marker);
-            }
-        });
-    }
+            });
+        }
 
-    let familyFilters = $('#familyFilter input[type="checkbox"]');
-    let checkedFamilyFilters = $('#familyFilter input[type="checkbox"]:checked');
-
-    //When the page loads, populate activeFamilies with all the initially checked families
-    checkedFamilyFilters.each(function () {
-        activeFamilies.push($(this).val());
-    });
-
-    familyFilters.change(function () {
-
-        // Reset the array
-        activeFamilies = [];
-
-        // Loop through all checked boxes and store their values
+        //When the page loads, populate activeFamilies with all the initially checked families
         $('#familyFilter input[type="checkbox"]:checked').each(function () {
             activeFamilies.push($(this).val());
         });
-
         updateVisibleMarkers();
-    });
 
+        $('#familyFilter input[type="checkbox"]').change(function () {
+
+            // Reset the array
+            activeFamilies = [];
+
+            // Loop through all checked boxes and store their values
+            $('#familyFilter input[type="checkbox"]:checked').each(function () {
+                activeFamilies.push($(this).val());
+            });
+
+            updateVisibleMarkers();
+        });
+    });
 
 });
