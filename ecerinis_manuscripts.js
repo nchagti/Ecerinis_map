@@ -123,7 +123,7 @@ const allMarkers = []; //make sure to declare outside the loop, so not resetting
                     console.log(`Error showing family marker`)
                 }
             }
-            if (showMarker = true) {
+            if (showMarker) {
                 marker.addTo(map)
             }
             else {
