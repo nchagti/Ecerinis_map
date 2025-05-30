@@ -129,37 +129,30 @@ $(function () {
             else {
                 map.removeLayer(marker);
             }
-        }); 
+        });
     }
 
+    let familyFilters = $('#familyFilter input[type="checkbox"]');
+    let checkedFamilyFilters = $('#familyFilter input[type="checkbox"]:checked');
 
+    //When the page loads, populate activeFamilies with all the initially checked families
+    checkedFamilyFilters.each(function () {
+        activeFamilies.push($(this).val());
 
+        //within the function block, listen for changes on the checkboxes
 
+        familyFilters.change(function () {
 
+            // Reset the array
+            activeFamilies = [];
 
-
-
-        let familyFilters = $('#familyFilter input[type="checkbox"]');
-        let checkedFamilyFilters = $('#familyFilter input[type="checkbox"]:checked');
-
-        //When the page loads, populate activeFamilies with all the initially checked families
-        checkedFamilyFilters.each(function () {
-            activeFamilies.push($(this).val());
-
-            //within the function block, listen for changes on the checkboxes
-
-            familyFilters.change(function () {
-
-                // Reset the array
-                activeFamilies = [];
-
-                // Loop through all checked boxes and store their values
-                checkedFamilyFilters.each(function () {
-                    activeFamilies.push($(this).val());
-                });
-
-                updateVisibleMarkers();
+            // Loop through all checked boxes and store their values
+            checkedFamilyFilters.each(function () {
+                activeFamilies.push($(this).val());
             });
-        });
 
+            updateVisibleMarkers();
+        });
     });
+
+});
