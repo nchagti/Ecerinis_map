@@ -71,11 +71,10 @@ $(function () {
             }
             let notation = ''
             if (manuscript.notation && manuscript.notation.base && manuscript.notation.superscript) {
-        
-                    notation = `${manuscript.notation.base}<sup>${manuscript.notation.superscript}</sup>`;
-                }
-            else if (manuscript.notation && manuscript.notation.base)
-            {
+
+                notation = `${manuscript.notation.base}<sup>${manuscript.notation.superscript}</sup>`;
+            }
+            else if (manuscript.notation && manuscript.notation.base) {
                 notation = manuscript.notation.base;
             }
             else {
@@ -88,12 +87,20 @@ $(function () {
             else {
                 console.log(`Error: No families found.`)
             }
-           
-            const manuscriptMarker = L.marker(manuscriptCoords).addTo(map).bindPopup(`<b>Name:</b> ${manuscriptName}<br> 
-    <b>Manuscript Number:</b> ${manuscriptNumber} <br>
-    <b>Date:</b> ${date} <br>
-    <b>Holding Institution:</b> ${institution} <br>
-    <b>Institution City:</b> ${institutionCity}`);
+
+            const manuscriptMarker = L.marker(manuscriptCoords);
+            //The L.marker() function returns an object, and in JavaScript, can attach custom properties to objects (like .families or .notation). Makes it easy to filter markers by checking for marker.families.includes('α'), e.g.
+            manuscriptMarker.families = families; //Attach metadata to marker 
+            manuscriptMarker.notation = notation; //Attach metadata to marker
+            popupMessage = `<b>Name:</b> ${manuscriptName}<br> 
+            <b>Manuscript Number:</b> ${manuscriptNumber} <br>
+            <b>Date:</b> ${date} <br>
+            <b>Holding Institution:</b> ${institution} <br>
+            <b>Institution City:</b> ${institutionCity} <br>
+            <b>Manuscript Notation:</b> ${notation} <br>
+            <b>Manuscript Families:</b> ${families} <br>`
+
+                .addTo(map).bindPopup();
 
         });
 
