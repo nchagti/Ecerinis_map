@@ -10,7 +10,7 @@
                 "notation": {
                     "base": "Be",
                 "superscript": "1"},
-                "families": ["x", "ε"]
+                "families": ["ε"]
             },
             {
                 "coordinates": [52.50794267460308, 13.37082755350924],
@@ -22,7 +22,7 @@
                 "notation": {
                     "base": "B"
                 },
-                "families": ["x", "α"]
+                "families": ["α"]
             },
             {
                 "coordinates": [44.49675307953846, 11.353064581723348],
@@ -33,7 +33,7 @@
                 "institutionCity": "Bologna",
                 "notation": {
                     "base": "U"},
-                "families": ["x", "ζ"]
+                "families": ["ζ"]
             },
             {
                 "coordinates": [41.84240487737197, -3.1069307752596607],
@@ -44,7 +44,7 @@
                 "institutionCity": "El Burgo de Osma, Soria",
                 "notation": {
                     "base": "Bu"},
-                "families": ["x", "η"]
+                "families": ["η"]
             }
     ]
 }
