@@ -1,0 +1,36 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #fdfdfd;
+    color: #222;
+}
+  .container {
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the container */
+  }
+  
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  #intro p {
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+  }
+   #map {
+  height: 400px; /* Or any height you prefer */
+  width: 100%;   /* Make it fill the container width */
+  border: 1px solid #ccc; /* Optional: add a border */
+  margin-top: 20px; /* Optional: space above the map */
+}
+  
+  a { /* General link styling */
+    color: #0066cc;
+  }
+  a:hover {
+      color: #004080;
+  }
