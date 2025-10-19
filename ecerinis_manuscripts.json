@@ -258,7 +258,14 @@
       "notation": {
         "base": "A"
       },
-      "families": [],
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "γ"
+        }
+      ],
       "derivedFrom": []
     },
     {
@@ -319,7 +326,7 @@
           "base": "x"
         },
         {
-          "base": "y"
+          "base": "γ"
         }
       ],
       "derivedFrom": [
@@ -365,15 +372,16 @@
           "base": "x"
         },
         {
-          "base": "y"
+          "base": "γ"
         }
       ],
       "derivedFrom": [
         {
-          "base": "A"
+          "base": "A",
+          "superscript": "3"
         },
         {
-          "superscript": "3"
+          "base": "A"
         }
       ]
     },
@@ -545,7 +553,7 @@
       ],
       "derivedFrom": [
         {
-          "base": "F"
+          "base": "L"
         }
         ]
     },
@@ -560,7 +568,14 @@
         "base": "R",
         "superscript": "1"
       },
-      "families": [],
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "ζ"
+        }
+      ],
       "derivedFrom": []
     },
     {
@@ -653,9 +668,7 @@
       ],
       "derivedFrom": [
         {
-          "base": "A"
-        },
-        {
+          "base": "A",
           "superscript": "4"
         }
       ]
