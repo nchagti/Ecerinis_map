@@ -27,6 +27,16 @@ h1 {
   border: 1px solid #ccc; /* Optional: add a border */
   margin-top: 20px; /* Optional: space above the map */
 }
+
+  #principleBranches input[type="checkbox"] {
+      margin-right: 10px;
+      margin-left: 1px;
+  }
+
+  #subFamilies input[type="checkbox"] {
+      margin-right: 12px;
+      margin-left: 1px;
+  }
   
   a { /* General link styling */
     color: #0066cc;
