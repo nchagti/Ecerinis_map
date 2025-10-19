@@ -1,50 +1,726 @@
 {
-    "manuscripts": [
-            {
-                "coordinates": [45.70452525984535, 9.6631198781202],
-                "name": "Ecerinis",
-                "number": "MA 277 (Γ II 37)",
-                "date": "15th c. CE",
-                "institution": "Biblioteca Civica Angelo Mai",
-                "institutionCity": "Bergamo",
-                "notation": {
-                    "base": "Be",
-                "superscript": "1"},
-                "families": ["ε", "x"]
-            },
-            {
-                "coordinates": [52.50794267460308, 13.37082755350924],
-                "name": "Ecerinis",
-                "number": "lat. fol. 812",
-                "date": "1433 CE",
-                "institution": "Staatsbibliothek Preußischer Kulturbesitz",
-                "institutionCity": "Berlin",
-                "notation": {
-                    "base": "B"
-                },
-                "families": ["α", "x"]
-            },
-            {
-                "coordinates": [44.49675307953846, 11.353064581723348],
-                "name": "Ecerinis",
-                "number": "2073",
-                "date": "14th-15th c. CE",
-                "institution": "Biblioteca Universitaria",
-                "institutionCity": "Bologna",
-                "notation": {
-                    "base": "U"},
-                "families": ["ζ"]
-            },
-            {
-                "coordinates": [41.84240487737197, -3.1069307752596607],
-                "name": "Ecerinis",
-                "number": "156",
-                "date": "15th c. CE",
-                "institution": "Archivo Biblioteca de la Santa Iglesia Catedral",
-                "institutionCity": "El Burgo de Osma, Soria",
-                "notation": {
-                    "base": "Bu"},
-                "families": ["η"]
-            }
-    ]
+  "manuscripts": [
+    {
+      "coordinates": [45.70452525984535, 9.6631198781202],
+      "name": "Ecerinis",
+      "number": "MA 277 (Γ II 37)",
+      "date": "15th c. CE",
+      "institution": "Biblioteca Civica Angelo Mai",
+      "institutionCity": "Bergamo",
+      "notation": {
+        "base": "Be",
+        "superscript": "1"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "ε"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.70452525984535, 9.6631198781202],
+      "name": "Ecerinis",
+      "number": "MA 433 (Σ III 26)",
+      "date": "ca. 1496 CE",
+      "institution": "Biblioteca Civica Angelo Mai",
+      "institutionCity": "Bergamo",
+      "notation": {
+        "base": "Be",
+        "superscript": "2"
+      },
+      "families": [],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [52.50794267460308, 13.37082755350924],
+      "name": "Ecerinis",
+      "number": "lat. fol. 812",
+      "date": "1433 CE",
+      "institution": "Staatsbibliothek – Preußischer Kulturbesitz",
+      "institutionCity": "Berlin",
+      "notation": {
+        "base": "B"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "α"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [44.49675307953846, 11.353064581723348],
+      "name": "Ecerinis",
+      "number": "2073",
+      "date": "14th-15th c. CE",
+      "institution": "Biblioteca Universitaria",
+      "institutionCity": "Bologna",
+      "notation": {
+        "base": "U"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "ζ"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [41.84240487737197, -3.1069307752596607],
+      "name": "Ecerinis",
+      "number": "156",
+      "date": "15th c. CE",
+      "institution": "Archivo Biblioteca de la Santa Iglesia Catedral",
+      "institutionCity": "El Burgo de Osma, Soria",
+      "notation": {
+        "base": "Bu"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [43.77481120140996, 11.254630796740479],
+      "name": "Ecerinis",
+      "number": "Plut. 37.8",
+      "date": "14th-15th c. CE",
+      "institution": "Biblioteca Medicea Laurenziana",
+      "institutionCity": "Florence",
+      "notation": {
+        "base": "F"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "γ",
+          "superscript": "1"
+        },
+        {
+          "base": "γ"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "L"
+        }
+      ]
+    },
+    {
+      "coordinates": [43.76718169248469, 11.263652888093114],
+      "name": "Ecerinis",
+      "number": "Magliabechiano VII 926",
+      "date": "14th c. CE",
+      "institution": "Biblioteca Nazionale Centrale",
+      "institutionCity": "Florence",
+      "notation": {
+        "base": "M"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [52.969103380052545, 0.8412241306992124],
+      "name": "Ecerinis",
+      "number": "425",
+      "date": "15th c. CE",
+      "institution": "Library of the Earl of Leicester at Holkham Hall",
+      "institutionCity": "Norfolk",
+      "notation": {
+        "base": "H"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "β"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [51.53015308414702, -0.12770013631864263],
+      "name": "Ecerinis",
+      "number": "Additional 11987",
+      "date": "1370 CE",
+      "institution": "British Library",
+      "institutionCity": "London",
+      "notation": {
+        "base": "L"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "γ",
+          "superscript": "1"
+        },
+        {
+          "base": "γ"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [51.53015308414702, -0.12770013631864263],
+      "name": "Ecerinis",
+      "number": "Egerton 2630",
+      "date": "14th-15th c. CE",
+      "institution": "British Library",
+      "institutionCity": "London",
+      "notation": {
+        "base": "G"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "α"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [51.53015308414702, -0.12770013631864263],
+      "name": "Ecerinis",
+      "number": "Harley 3565",
+      "date": "15th c. CE",
+      "institution": "British Library",
+      "institutionCity": "London",
+      "notation": {
+        "base": "Y"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "ε"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "D 11 inf.",
+      "date": "1375 CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A"
+      },
+      "families": [],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "D 38 inf.",
+      "date": "1406 CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A",
+        "superscript": "1"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "G 111 inf.",
+      "date": "1400 CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A",
+        "superscript": "2"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "N 156 sup.",
+      "date": "ca. 1565 CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A",
+        "superscript": "3"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "A"
+        }      
+      ]
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "N 288 sup.",
+      "date": "14th c. CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A",
+        "superscript": "4"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "δ"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.463614517616, 9.185820282294024],
+      "name": "Ecerinis",
+      "number": "O 151 sup.",
+      "date": "16th c. CE",
+      "institution": "Biblioteca Ambrosiana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "A",
+        "superscript": "5"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "A"
+        },
+        {
+          "superscript": "3"
+        }
+      ]
+    },
+    {
+      "coordinates": [45.470385697006186, 9.181046495787479],
+      "name": "Ecerinis",
+      "number": "Trivulziano 1088",
+      "date": "14th c. CE",
+      "institution": "Archivio storico civico e Biblioteca Trivulziana",
+      "institutionCity": "Milan",
+      "notation": {
+        "base": "T"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "α"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [44.64843342665915, 10.920970909225826], 
+      "name": "Ecerinis",
+      "number": "lat. 271 (α Q 8, 31)",
+      "date": "14th c. CE",
+      "institution": "Biblioteca Estense Universitaria",
+      "institutionCity": "Modena",
+      "notation": {
+        "base": "E",
+        "superscript": "1"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "γ",
+          "superscript": "1"
+        },
+        {
+          "base": "γ"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [44.64843342665915, 10.920970909225826],
+      "name": "Ecerinis",
+      "number": "lat. 433 (α Q 4, 16)",
+      "date": "1384 CE",
+      "institution": "Biblioteca Estense Universitaria",
+      "institutionCity": "Modena",
+      "notation": {
+        "base": "E",
+        "superscript": "2"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "δ"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "V"
+        }
+      ]
+    },
+    {
+      "coordinates": [48.1476504567779, 11.580268051793206],
+      "name": "Ecerinis",
+      "number": "Clm 15772",
+      "date": "14th c. CE",
+      "institution": "Bayerische Staatsbibliothek",
+      "institutionCity": "Munich",
+      "notation": {
+        "base": "Mu"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [51.75432202962827, -1.2540634614384558],
+      "name": "Ecerinis",
+      "number": "Canon. class. lat. 110",
+      "date": "15th c. CE",
+      "institution": "Bodleian Library",
+      "institutionCity": "Oxford",
+      "notation": {
+        "base": "O"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.407313643806106, 11.880478551605005],
+      "name": "Ecerinis",
+      "number": "1",
+      "date": "15th c. CE",
+      "institution": "Biblioteca Universitaria",
+      "institutionCity": "Padua",
+      "notation": {
+        "base": "P"
+      },
+      "families": [],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [48.86980891172039, 2.337452629060342],
+      "name": "Ecerinis",
+      "number": "lat. 8027",
+      "date": "ca. 1388-1389 CE",
+      "institution": "Bibliothèque nationale de France",
+      "institutionCity": "Paris",
+      "notation": {
+        "base": "N"
+      },
+      "families": [],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [48.86980891172039, 2.337452629060342],
+      "name": "Ecerinis",
+      "number": "Collection de manuscrits d'Auguste Rondel, MRe 27",
+      "date": "ca. 1380-1385 CE",
+      "institution": "Bibliothèque nationale de France",
+      "institutionCity": "Paris",
+      "notation": {
+        "base": "N",
+        "superscript": "1"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "γ",
+          "superscript": "1"
+        },
+        {
+          "base": "γ"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "F"
+        }
+        ]
+    },
+    {
+      "coordinates": [41.90570498420137, 12.508213293706948],
+      "name": "Ecerinis",
+      "number": "Sessoriano 289",
+      "date": "15th c. CE",
+      "institution": "Biblioteca Nazionale Centrale Vittorio Emanuele II",
+      "institutionCity": "Rome",
+      "notation": {
+        "base": "R",
+        "superscript": "1"
+      },
+      "families": [],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [41.90570498420137, 12.508213293706948],
+      "name": "Ecerinis",
+      "number": "Sessoriano 292 Lombardy",
+      "date": "15th c. CE",
+      "institution": "Biblioteca Nazionale Centrale Vittorio Emanuele II",
+      "institutionCity": "Rome",
+      "notation": {
+        "base": "R",
+        "superscript": "2"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [37.38686706503697, -5.992740204711977],
+      "name": "Ecerinis",
+      "number": "7-5-5",
+      "date": "14th-15th c. CE",
+      "institution": "Biblioteca Capitular y Colombina",
+      "institutionCity": "Seville",
+      "notation": {
+        "base": "C"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "β"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.43362777787257, 12.338823809278093],
+      "name": "Ecerinis",
+      "number": "lat. XII 25 (4090)",
+      "date": "14th-15th c. CE",
+      "institution": "Biblioteca Nazionale Marciana",
+      "institutionCity": "Venice",
+      "notation": {
+        "base": "V",
+        "superscript": "1"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.43362777787257, 12.338823809278093],
+      "name": "Ecerinis",
+      "number": "lat. XII 76 (3980)",
+      "date": "14th c. CE",
+      "institution": "Biblioteca Nazionale Marciana",
+      "institutionCity": "Venice",
+      "notation": {
+        "base": "V",
+        "superscript": "2"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "δ"
+        }
+      ],
+      "derivedFrom": [
+        {
+          "base": "A"
+        },
+        {
+          "superscript": "4"
+        }
+      ]
+    },
+    {
+      "coordinates": [45.43362777787257, 12.338823809278093],
+      "name": "Ecerinis",
+      "number": "lat. XII 121 (4213)",
+      "date": "14th c. CE",
+      "institution": "Biblioteca Nazionale Marciana",
+      "institutionCity": "Venice",
+      "notation": {
+        "base": "V",
+        "superscript": "3"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "η"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.43362777787257, 12.338823809278093],
+      "name": "Ecerinis",
+      "number": "lat. XIV 252 (4718)",
+      "date": "15th-16th c. CE",
+      "institution": "Biblioteca Nazionale Marciana",
+      "institutionCity": "Venice",
+      "notation": {
+        "base": "V",
+        "superscript": "4"
+      },
+      "families": [
+        {
+          "base": "x"
+        },
+        {
+          "base": "α"
+        },
+        {
+          "base": "y",
+          "superscript": "1"
+        },
+        {
+          "base": "y"
+        }
+      ],
+      "derivedFrom": []
+    },
+    {
+      "coordinates": [45.54939833621104, 11.544514070306162],
+      "name": "Ecerinis",
+      "number": "160",
+      "date": "ca. 1477-1485 CE",
+      "institution": "Biblioteca Civica Bertoliana",
+      "institutionCity": "Vicenza",
+      "notation": {
+        "base": "Vi"
+      },
+      "families": [],
+      "derivedFrom": []
+    }
+  ]
 }
