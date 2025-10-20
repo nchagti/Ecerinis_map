@@ -169,9 +169,9 @@ $(function () {
     function updateVisibleMarkers() {
       allMarkers.forEach(function (marker) {
 
-        const hasTags = marker.tags && marker.tags.length > 0;
+        const hasFamilies = marker.families && marker.families.length > 0;
         const show = activeFamilies.length === 0 //if no families are checked
-          ? !hasTags               // show markers with no lineage otherwise go to the second condition
+          ? !hasFamilies               // show markers with no lineage otherwise go to the second condition
           : marker.tags?.some(tag => activeFamilies.includes(tag));  //marker.lineage? = if marker.tags exists, call .some() on it
                                                                                       // .some() is an array method that tests whether at least one element in the array passes a condition
                                                                                     // .some() stops as soon as it finds one match and returns true; if it finds none, it returns false
