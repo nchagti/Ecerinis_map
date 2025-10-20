@@ -2,7 +2,6 @@
   "manuscripts": [
     {
       "coordinates": [45.70452525984535, 9.6631198781202],
-      "name": "Ecerinis",
       "number": "MA 277 (Γ II 37)",
       "date": "15th c. CE",
       "institution": "Biblioteca Civica Angelo Mai",
@@ -23,7 +22,6 @@
     },
     {
       "coordinates": [45.70452525984535, 9.6631198781202],
-      "name": "Ecerinis",
       "number": "MA 433 (Σ III 26)",
       "date": "ca. 1496 CE",
       "institution": "Biblioteca Civica Angelo Mai",
@@ -37,7 +35,6 @@
     },
     {
       "coordinates": [52.50794267460308, 13.37082755350924],
-      "name": "Ecerinis",
       "number": "lat. fol. 812",
       "date": "1433 CE",
       "institution": "Staatsbibliothek – Preußischer Kulturbesitz",
@@ -63,8 +60,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [44.49675307953846, 11.353064581723348],
-      "name": "Ecerinis",
+      "coordinates": [44.49675307953846, 11.353064581723348],      
       "number": "2073",
       "date": "14th-15th c. CE",
       "institution": "Biblioteca Universitaria",
@@ -83,8 +79,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [41.84240487737197, -3.1069307752596607],
-      "name": "Ecerinis",
+      "coordinates": [41.84240487737197, -3.1069307752596607],      
       "number": "156",
       "date": "15th c. CE",
       "institution": "Archivo Biblioteca de la Santa Iglesia Catedral",
@@ -103,8 +98,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [43.77481120140996, 11.254630796740479],
-      "name": "Ecerinis",
+      "coordinates": [43.77481120140996, 11.254630796740479],      
       "number": "Plut. 37.8",
       "date": "14th-15th c. CE",
       "institution": "Biblioteca Medicea Laurenziana",
@@ -131,8 +125,7 @@
       ]
     },
     {
-      "coordinates": [43.76718169248469, 11.263652888093114],
-      "name": "Ecerinis",
+      "coordinates": [43.76718169248469, 11.263652888093114],      
       "number": "Magliabechiano VII 926",
       "date": "14th c. CE",
       "institution": "Biblioteca Nazionale Centrale",
@@ -151,8 +144,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [52.969103380052545, 0.8412241306992124],
-      "name": "Ecerinis",
+      "coordinates": [52.969103380052545, 0.8412241306992124],      
       "number": "425",
       "date": "15th c. CE",
       "institution": "Library of the Earl of Leicester at Holkham Hall",
@@ -178,8 +170,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [51.53015308414702, -0.12770013631864263],
-      "name": "Ecerinis",
+      "coordinates": [51.53015308414702, -0.12770013631864263],      
       "number": "Additional 11987",
       "date": "1370 CE",
       "institution": "British Library",
@@ -202,8 +193,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [51.53015308414702, -0.12770013631864263],
-      "name": "Ecerinis",
+      "coordinates": [51.53015308414702, -0.12770013631864263],      
       "number": "Egerton 2630",
       "date": "14th-15th c. CE",
       "institution": "British Library",
@@ -229,8 +219,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [51.53015308414702, -0.12770013631864263],
-      "name": "Ecerinis",
+      "coordinates": [51.53015308414702, -0.12770013631864263],      
       "number": "Harley 3565",
       "date": "15th c. CE",
       "institution": "British Library",
@@ -249,8 +238,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "D 11 inf.",
       "date": "1375 CE",
       "institution": "Biblioteca Ambrosiana",
@@ -269,8 +257,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "D 38 inf.",
       "date": "1406 CE",
       "institution": "Biblioteca Ambrosiana",
@@ -290,8 +277,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "G 111 inf.",
       "date": "1400 CE",
       "institution": "Biblioteca Ambrosiana",
@@ -311,8 +297,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "N 156 sup.",
       "date": "ca. 1565 CE",
       "institution": "Biblioteca Ambrosiana",
@@ -336,8 +321,7 @@
       ]
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "N 288 sup.",
       "date": "14th c. CE",
       "institution": "Biblioteca Ambrosiana",
@@ -357,8 +341,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.463614517616, 9.185820282294024],
-      "name": "Ecerinis",
+      "coordinates": [45.463614517616, 9.185820282294024],      
       "number": "O 151 sup.",
       "date": "16th c. CE",
       "institution": "Biblioteca Ambrosiana",
@@ -386,8 +369,7 @@
       ]
     },
     {
-      "coordinates": [45.470385697006186, 9.181046495787479],
-      "name": "Ecerinis",
+      "coordinates": [45.470385697006186, 9.181046495787479],      
       "number": "Trivulziano 1088",
       "date": "14th c. CE",
       "institution": "Archivio storico civico e Biblioteca Trivulziana",
@@ -413,8 +395,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [44.64843342665915, 10.920970909225826], 
-      "name": "Ecerinis",
+      "coordinates": [44.64843342665915, 10.920970909225826],      
       "number": "lat. 271 (α Q 8, 31)",
       "date": "14th c. CE",
       "institution": "Biblioteca Estense Universitaria",
@@ -438,8 +419,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [44.64843342665915, 10.920970909225826],
-      "name": "Ecerinis",
+      "coordinates": [44.64843342665915, 10.920970909225826],      
       "number": "lat. 433 (α Q 4, 16)",
       "date": "1384 CE",
       "institution": "Biblioteca Estense Universitaria",
@@ -463,8 +443,7 @@
       ]
     },
     {
-      "coordinates": [48.1476504567779, 11.580268051793206],
-      "name": "Ecerinis",
+      "coordinates": [48.1476504567779, 11.580268051793206],      
       "number": "Clm 15772",
       "date": "14th c. CE",
       "institution": "Bayerische Staatsbibliothek",
@@ -483,8 +462,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [51.75432202962827, -1.2540634614384558],
-      "name": "Ecerinis",
+      "coordinates": [51.75432202962827, -1.2540634614384558],      
       "number": "Canon. class. lat. 110",
       "date": "15th c. CE",
       "institution": "Bodleian Library",
@@ -503,8 +481,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.407313643806106, 11.880478551605005],
-      "name": "Ecerinis",
+      "coordinates": [45.407313643806106, 11.880478551605005],      
       "number": "1",
       "date": "15th c. CE",
       "institution": "Biblioteca Universitaria",
@@ -516,8 +493,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [48.86980891172039, 2.337452629060342],
-      "name": "Ecerinis",
+      "coordinates": [48.86980891172039, 2.337452629060342],      
       "number": "lat. 8027",
       "date": "ca. 1388-1389 CE",
       "institution": "Bibliothèque nationale de France",
@@ -529,8 +505,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [48.86980891172039, 2.337452629060342],
-      "name": "Ecerinis",
+      "coordinates": [48.86980891172039, 2.337452629060342],      
       "number": "Collection de manuscrits d'Auguste Rondel, MRe 27",
       "date": "ca. 1380-1385 CE",
       "institution": "Bibliothèque nationale de France",
@@ -558,8 +533,7 @@
         ]
     },
     {
-      "coordinates": [41.90570498420137, 12.508213293706948],
-      "name": "Ecerinis",
+      "coordinates": [41.90570498420137, 12.508213293706948],      
       "number": "Sessoriano 289",
       "date": "15th c. CE",
       "institution": "Biblioteca Nazionale Centrale Vittorio Emanuele II",
@@ -579,8 +553,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [41.90570498420137, 12.508213293706948],
-      "name": "Ecerinis",
+      "coordinates": [41.90570498420137, 12.508213293706948],      
       "number": "Sessoriano 292 Lombardy",
       "date": "15th c. CE",
       "institution": "Biblioteca Nazionale Centrale Vittorio Emanuele II",
@@ -600,8 +573,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [37.38686706503697, -5.992740204711977],
-      "name": "Ecerinis",
+      "coordinates": [37.38686706503697, -5.992740204711977],      
       "number": "7-5-5",
       "date": "14th-15th c. CE",
       "institution": "Biblioteca Capitular y Colombina",
@@ -627,8 +599,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.43362777787257, 12.338823809278093],
-      "name": "Ecerinis",
+      "coordinates": [45.43362777787257, 12.338823809278093],      
       "number": "lat. XII 25 (4090)",
       "date": "14th-15th c. CE",
       "institution": "Biblioteca Nazionale Marciana",
@@ -648,8 +619,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.43362777787257, 12.338823809278093],
-      "name": "Ecerinis",
+      "coordinates": [45.43362777787257, 12.338823809278093],      
       "number": "lat. XII 76 (3980)",
       "date": "14th c. CE",
       "institution": "Biblioteca Nazionale Marciana",
@@ -674,8 +644,7 @@
       ]
     },
     {
-      "coordinates": [45.43362777787257, 12.338823809278093],
-      "name": "Ecerinis",
+      "coordinates": [45.43362777787257, 12.338823809278093],      
       "number": "lat. XII 121 (4213)",
       "date": "14th c. CE",
       "institution": "Biblioteca Nazionale Marciana",
@@ -695,8 +664,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.43362777787257, 12.338823809278093],
-      "name": "Ecerinis",
+      "coordinates": [45.43362777787257, 12.338823809278093],      
       "number": "lat. XIV 252 (4718)",
       "date": "15th-16th c. CE",
       "institution": "Biblioteca Nazionale Marciana",
@@ -723,8 +691,7 @@
       "derivedFrom": []
     },
     {
-      "coordinates": [45.54939833621104, 11.544514070306162],
-      "name": "Ecerinis",
+      "coordinates": [45.54939833621104, 11.544514070306162],      
       "number": "160",
       "date": "ca. 1477-1485 CE",
       "institution": "Biblioteca Civica Bertoliana",
