@@ -26,11 +26,18 @@ $(function () {
   const toggleAll = $("#toggleAll"); // button in Event Listeners section
   
   //Define manuscript family relationships for filtering logic
-  const familyChildren = { // principle branches
+  const children = { 
+                        // families
+                          // principle branches
                            x:['y','y1','alpha','beta','gamma','gamma1','delta','epsilon','zeta','eta'],
                            y:['y1'], 
                            // Sub-families with superscripts
-                           gamma:['gamma1'] };
+                           gamma:['gamma1'],
+                        // derivations
+                           A4:['V2'],
+                           V:['E2'],
+                           A:['A3','A5'],
+                           L:['N1', 'F']};
 
   // Global state that other functions read
   const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
@@ -80,8 +87,19 @@ $(function () {
       const derivedFromDisplay = (Array.isArray(manuscript.derivedFrom) ? manuscript.derivedFrom : []) //checks if manuscript.derivedFrom is an array; if not, uses empty array
         .map(fmtNotation).filter(Boolean);  //applies fmtNotation to each element, then filters out any null/undefined values
 
-      const notation = (manuscript.notation && manuscript.notation.base) ? (manuscript.notation.superscript ? `${manuscript.notation.base}<sup>${manuscript.notation.superscript}</sup>` : manuscript.notation.base) : "";
+      const derivedFromRaw = (Array.isArray(manuscript.derivedFrom) ? manuscript.derivedFrom : [])
+        .map(rawData).filter(Boolean); //instead of fmtNotation, keeps only the raw info, used for filtering logic
 
+      const notationRaw = rawData(manuscript.notation);
+
+      const tags = [...new Set(
+        [...familiesRaw, ...derivedFromRaw, notationRaw].filter(Boolean)  // Merge the arrays familiesRaw and derivedFromRaw by using the spread operator
+                                                                          // since notationRaw is a string, spread operator would split it by character
+                                                                          // filter out null values
+                                                                          // then deduplicate by converting into a set and finally spread back into array
+      )];
+
+      const notation = (manuscript.notation && manuscript.notation.base) ? (manuscript.notation.superscript ? `${manuscript.notation.base}<sup>${manuscript.notation.superscript}</sup>` : manuscript.notation.base) : "";
       
       // Diagnositcs: detect malformed entries
       const familiesInputCount = Array.isArray(manuscript.families) ? manuscript.families.length : 0;
@@ -96,12 +114,6 @@ $(function () {
         manuscriptCoords = manuscript.coordinates;
       } else {
         console.log(`Error: No coordinates found.`);
-      }
-      let manuscriptName = "";
-      if (manuscript.name) {
-        manuscriptName = manuscript.name;
-      } else {
-        console.log(`Error: No manuscript name found.`);
       }
       let manuscriptNumber = "";
       if (manuscript.number) {
@@ -133,11 +145,11 @@ $(function () {
       manuscriptMarker.families = familiesRaw; //Attach metadata to marker
       manuscriptMarker.notation = notation; //Attach metadata to marker
       manuscriptMarker.derivedFrom = derivedFromDisplay; //Attach metadata to marker
+      manuscriptMarker.tags = tags; //Attach metadata to marker for both families and derivations
       allMarkers.push(manuscriptMarker); //Add marker to global array for filtering later
 
       // Create popup content with conditional lines for families and derivedFrom
-      const popupMessage = `<b>Name:</b> ${manuscriptName}<br> 
-            <b>Manuscript Number:</b> ${manuscriptNumber} <br>
+      const popupMessage = `<b>Manuscript Number:</b> ${manuscriptNumber} <br>
             <b>Date:</b> ${date} <br>
             <b>Holding Institution:</b> ${institution} <br>
             <b>Institution City:</b> ${institutionCity} <br>
@@ -155,54 +167,32 @@ $(function () {
 
     function updateVisibleMarkers() {
       allMarkers.forEach(function (marker) {
-        let showMarker = false;
-        for (let family of marker.families) {
-          if (activeFamilies.includes(family)) {
-            showMarker = true;
-            break;
-          }
-          // else {
-          //     console.log(`Error showing family marker`)
-          // }
-        }
-        if (showMarker) {
-          marker.addTo(map);
-        } else {
-          map.removeLayer(marker);
-        }
+        const show = marker.tags?.some(tag => activeFamilies.includes(tag));  //marker.tags? = if marker.tags exists, call .some() on it
+                                                                              // .some() is an array method that tests whether at least one element in the array passes a condition
+                                                                              // .some() stops as soon as it finds one match and returns true; if it finds none, it returns false
+                                                                              // For each tag in this marker’s list, check if that tag is found in the activeFamilies array (which holds all currently checked families).
+                                                                              // function(tag) { 
+                                                                              // return activeFamilies.includes(tag); 
+                                                                              // } 
+                                                                              // is equivalent to the arrow function tag => activeFamilies.includes(tag)
+                                                                              // show is a boolean: true if at least one tag matches an active family, false otherwise
+
+      if (show) marker.addTo(map); else map.removeLayer(marker);
       });
     }
 
-    function uncheckDescendants(node) {
-      // node is the actual <input type="checkbox"> element
-      const id = node.id;
-
-      // A) uncheck THIS node
-      $(node).prop('checked', false);
-
-      // B) get my immediate children, if any
-      const kids = familyChildren[id] || [];
-
-      // C) recursively uncheck each child
-      for (const kidId of kids) {
-        const child = document.getElementById(kidId);
-        if (child) uncheckDescendants(child);
+    function updateChildCheckboxes(node, map, parentCheckedValue) {
+      $(node).prop('checked', parentCheckedValue); //'checked' is a built-in HTML property; the string 'checked' tells jQuery which property to change
+                                                  // parentCheckedValue is a boolean: true or false, 
+                                                  // Its value (true or false) stays constant as we recurse down the tree
+                                                  // Each child call receives a copy of that same boolean
+      for (const kidId of (map[node.id] || [])) {  // map[node.id] looks up the list of that node’s children. if none, uses empty array
+                                                  // kidId is a string variable that takes on each child’s ID value from that array 
+        const child = document.getElementById(kidId);  // turns that string ID into a real DOM element — e.g. <input type="checkbox" id="F"> element in the HTML
+        if (child) updateChildCheckboxes(child, map, parentCheckedValue);
       }
     }
 
-    function checkDescendants(node) {
-      const id = node.id;
-
-      // A) check THIS node
-      $(node).prop('checked', true);
-
-      // B) recurse into immediate children
-      const kids = familyChildren[id] || [];
-      for (const kidId of kids) {
-        const child = document.getElementById(kidId);
-        if (child) checkDescendants(child);
-      }
-    }
 
   /* ====================
         UPDATE STATE
@@ -255,13 +245,7 @@ $(function () {
 
     // Checkbox recursion event
     $('#familyFilter').on('change', 'input[type="checkbox"]', function () {
-      if (this.checked) {
-        // If I turn a parent ON, turn all my descendants ON
-        checkDescendants(this);
-      } else {
-        // If I turn a parent OFF, turn all my descendants OFF
-        uncheckDescendants(this);
-      }
+      updateChildCheckboxes(this, children, this.checked);
       // Now rebuild activeFamilies and refresh markers + "Select All" label
       updateAll();
     });
