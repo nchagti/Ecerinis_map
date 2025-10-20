@@ -37,6 +37,11 @@ h1 {
       margin-right: 12px;
       margin-left: 1px;
   }
+
+  #derivations input[type="checkbox"] {
+      margin-right: 12px;
+      margin-left: 1px;
+  }
   
   a { /* General link styling */
     color: #0066cc;
