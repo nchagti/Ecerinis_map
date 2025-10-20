@@ -29,7 +29,7 @@ $(function () {
   const children = { 
                         // families
                           // principle branches
-                           x:['y','y1','alpha','beta','gamma','gamma1','delta','epsilon','zeta','eta'],
+                           x:['y','y1','alpha','beta','gamma','gamma1','delta','epsilon','zeta','eta', 'A4','V','A','L'],
                            y:['y1'], 
                            // Sub-families with superscripts
                            gamma:['gamma1'],
@@ -38,6 +38,7 @@ $(function () {
                            V:['E2'],
                            A:['A3','A5'],
                            L:['N1', 'F']};
+
 
   // Global state that other functions read
   const allMarkers = []; //make sure to declare outside the loop, so not resetting the array every time
@@ -167,19 +168,23 @@ $(function () {
 
     function updateVisibleMarkers() {
       allMarkers.forEach(function (marker) {
-        const show = marker.tags?.some(tag => activeFamilies.includes(tag));  //marker.tags? = if marker.tags exists, call .some() on it
-                                                                              // .some() is an array method that tests whether at least one element in the array passes a condition
-                                                                              // .some() stops as soon as it finds one match and returns true; if it finds none, it returns false
-                                                                              // For each tag in this marker’s list, check if that tag is found in the activeFamilies array (which holds all currently checked families).
-                                                                              // function(tag) { 
-                                                                              // return activeFamilies.includes(tag); 
-                                                                              // } 
-                                                                              // is equivalent to the arrow function tag => activeFamilies.includes(tag)
-                                                                              // show is a boolean: true if at least one tag matches an active family, false otherwise
 
-      if (show) marker.addTo(map); else map.removeLayer(marker);
-      });
-    }
+        const hasTags = marker.tags && marker.tags.length > 0;
+        const show = activeFamilies.length === 0 //if no families are checked
+          ? !hasTags               // show markers with no lineage otherwise go to the second condition
+          : marker.tags?.some(tag => activeFamilies.includes(tag));  //marker.lineage? = if marker.tags exists, call .some() on it
+                                                                                      // .some() is an array method that tests whether at least one element in the array passes a condition
+                                                                                    // .some() stops as soon as it finds one match and returns true; if it finds none, it returns false
+                                                                                    // For each tag in this marker’s list, check if that tag is found in the activeFamilies array (which holds all currently checked families).
+                                                                                    // function(tag) { 
+                                                                                    // return activeFamilies.includes(tag); 
+                                                                                    // } 
+                                                                                    // is equivalent to the arrow function tag => activeFamilies.includes(tag)
+                                                                                    // show is a boolean: true if at least one tag matches an active family, false otherwise
+        if (show) marker.addTo(map); else map.removeLayer(marker);
+        });
+      }
+
 
     function updateChildCheckboxes(node, map, parentCheckedValue) {
       $(node).prop('checked', parentCheckedValue); //'checked' is a built-in HTML property; the string 'checked' tells jQuery which property to change
