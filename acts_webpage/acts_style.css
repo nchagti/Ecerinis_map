@@ -1,0 +1,70 @@
+.back_link::before {
+  content: "←";
+  }
+
+.forward_link::after {
+  content: "→";
+  text-align: right;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 0 70px;
+  }
+
+h1 {
+    text-align: center;
+  }
+
+.acts_pyldavis {
+    width: 100%;
+    height: 1500px;
+    padding: 10px;
+}
+
+h2.topic-naming-title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 60px;
+  }
+
+.topic-naming-table {
+    font-size: 15px;
+    width: 50%;
+    margin: 35px auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+.topic-naming-table th,
+.topic-naming-table td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: center;
+    word-wrap: break-word;   /* <-- just headers centered */
+}
+
+.topic-naming-table td {
+  text-align: left;     /* <-- body cells left-aligned */
+}
+
+
+.topic-naming-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+h2.topic_heatmap {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+.acts_heatmap {
+  width: 100%;
+  max-width: 1500px;
+  display: block;        /* makes <img> respect margin auto */
+  margin: 0 auto;        /* centers it horizontally */
+}
