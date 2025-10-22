@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ecerinis Topic Modeling Visualization with pyLDAvis</title>
+    <link rel="stylesheet" href="corpus_style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v1.0.0.css">
+  </head>
+
+
+<body>
+<div class="links">
+  <a href="../index.html" class="back_link">Back to Map</a>
+  <a href="../acts_webpage/acts_lda.html" class="forward_link">Topic Modeling by Acts</a>
+</div>
+<h1>Topic Modeling Tragedies with pyLDAvis</h1>
+<div id="corpus_pyldavis"></div>
+<hr>
+
+<h2 class="topic-naming-title">Naming Topics</h2>
+<table class="topic-naming-table">
+  <thead>
+    <tr>
+      <th>pyLDAvis Topic #</th>
+      <th>Topic Name</th>
+    </tr>
+  </thead>
+  <tbody>
+      
+    <tr><td>1</td><td>Grotesque Pleasure and Familial Betrayal</td></tr>
+    <tr><td>2</td><td>Concealed Sin and Tragic Homecoming</td></tr>
+    <tr><td>3</td><td>Restraint & Ethical Reflection</td></tr>
+    <tr><td>4</td><td>Perversion, Concealment, and Ritual Distortion</td></tr>
+    <tr><td>5</td><td>Fragility of Fortune and Poetic Mediation</td></tr>
+    <tr><td>6</td><td>Tyranny, Political Ambition, and Collapse of Civic & Moral Order</td></tr>
+    <tr><td>7</td><td>Violence, Cosmic Disorder, and Divine Retribution</td></tr>    
+    <tr><td>8</td><td>Restraint & Ethical Reflection</td></tr>
+    
+  </tbody>
+</table>
+
+<h2 class="topic_heatmap">Topic–Play Heatmap</h2>
+<img src="corpus_filtered_topics_heatmap.png" class="corpus_heatmap">
+
+<script src="corpus_lda.js"></script>
+</body>
