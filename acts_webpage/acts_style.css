@@ -32,34 +32,38 @@ h2.topic-naming-title {
 
 .topic-naming-table {
     font-size: 15px;
-    width: 50%;
+    width: 55%;
     margin: 35px auto;
     border-collapse: collapse;
-    table-layout: fixed;
   }
+
+.topic-naming-table th:first-child,
+.topic-naming-table td:first-child {
+    width: 10%;
+    text-align: center;
+}
 
 .topic-naming-table th,
 .topic-naming-table td {
     border: 1px solid #ddd;
     padding: 12px 16px;
     text-align: center;
-    word-wrap: break-word;   /* <-- just headers centered */
+    word-wrap: break-word;   /* <-- headers centered */
 }
-
-.topic-naming-table td {
-  text-align: left;     /* <-- body cells left-aligned */
-}
-
 
 .topic-naming-table th {
   background-color: #f2f2f2;
   font-weight: bold;
 }
 
+.topic-naming-table td {
+  text-align: left;     /* <-- body cells left-aligned (over-riding previous center alignment to avoid repetition) */
+}
+
 h2.topic_heatmap {
   text-align: center;
   font-size: 28px;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .acts_heatmap {
